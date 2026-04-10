@@ -1,11 +1,13 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+int main () {
 
-int main() {
-  // Área para definição das variáveis para armazenar as propriedades das cidades
+//Apresentação do jogo - SplashScreen
+
+    printf ("Bem vindo ao Super Trunfo Cidades!\n");
+    printf ("Primeiro vamos cadastrar suas cartas!\n\n");
+    
+// Área para definição das variáveis para armazenar as propriedades das cidades
 
   char estado1, estado2;
   char carta1[4],carta2[4];
@@ -16,9 +18,6 @@ int main() {
   int pontosTuristicos1, pontosTuristicos2;
 
 // Área para entrada de dados
-
-    printf ("Vamos começar o jogo Super Trunfo!\n");
-    printf ("Primeiro vamos cadastrar suas cartas!\n\n");
 
     printf ("---CARTA 1---\n");
     printf ("Digite o Estado - Letras de A até H: \n");
@@ -37,7 +36,7 @@ int main() {
     scanf ("%d", &pontosTuristicos1);
 
     printf("\nVamos cadastrar os dados da Carta 2:\n");
-    printf ("\n---CARTA 2---\n");
+    printf ("---CARTA 2---\n");
     printf ("Digite o Estado - Letras de A a H: \n");
     scanf (" %c", &estado2);
     printf ("Digite o Código da Carta - Número de 01 a 04: \n");
@@ -65,6 +64,9 @@ int main() {
     printf ("PIB: %.2f\n", pib1);
     printf ("Número de Pontos Turísticos: %d\n", pontosTuristicos1);
     float Densidade1 = populacao1 / area1;
+    printf ("Densidade Populacional: %.2f hab/km²\n", Densidade1);
+    float PIBpercapita1 = pib1 / populacao1;
+    printf ("PIB per Capita: %.2f reais\n", PIBpercapita1);
 
     printf("\nOs dados da Carta 2 são:\n");
     printf ("\nCARTA 2\n");
@@ -75,6 +77,10 @@ int main() {
     printf ("Área: %.2f\n", area2);
     printf ("PIB: %.2f\n", pib2);
     printf ("Número de Pontos Turísticos: %d\n", pontosTuristicos2);
+    float Densidade2 = populacao2 / area2;
+    printf ("Densidade Populacional: %.2f hab/km²\n", Densidade2);
+    float PIBpercapita2 = pib2 / populacao2;
+    printf ("PIB per Capita: %.2f reais\n", PIBpercapita2);
 
 return 0;
 
